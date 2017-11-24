@@ -1,3 +1,4 @@
+import webpack from 'webpack';
 import path from 'path';
 
 export default {
@@ -13,6 +14,9 @@ export default {
     publicPath: '/',
     filename: 'bundle.js'
   },
+  devServer:{
+    contentBase: path.resolve(__dirname, 'src')
+  },
   plugins: [],
   module: {
     loaders: [
@@ -20,4 +24,4 @@ export default {
       {test: /\.css$/, loaders: ['style','css']}
     ]
   }
-}
+};
