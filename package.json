@@ -9,9 +9,14 @@
     "lint": "esw webpack.config.* src buldScripts --color",
     "lint:watch": "npm run lint -- --watch",
     "security-check": "nsp check",
+<<<<<<< HEAD
     "localtunnel": "lt --port 3000",
     "share": "npm-run-all --parallel open:src localtunnel",
     "test": "mocha --reporter progess buildScripts/testSetup.js \"src/**/*.test.js\""
+=======
+    "localtunnel": "lt --port 3000 --subdomain variableassign",
+    "share": "npm-run-all --parallel open:src localtunnel"
+>>>>>>> 3bc1bab28ad8e98e8505c6bf415f7dfe6d05a8b6
   },
   "author": "Cory House",
   "license": "MIT",
