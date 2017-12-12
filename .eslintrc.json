@@ -1,0 +1,25 @@
+{
+    "root": true,
+    "extends": [
+      "eslint:recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module"
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "mocha": true
+    },
+    "rules": {
+      "no-console": 0,              // disallow use of console (off by default in the node environment)
+      "no-constant-condition": 0,   // disallow use of constant expressions in conditions
+      "no-control-regex": 0,        // disallow control characters in regular expressions
+      "no-debugger": 0,             // disallow use of debugger
+      "no-unused-vars": 0
+  
+    }
+  }
