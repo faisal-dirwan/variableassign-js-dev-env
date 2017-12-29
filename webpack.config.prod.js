@@ -1,11 +1,14 @@
 import path from 'path';
 import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
     debug: true,
     devtool: 'source-map',
     noInfo: false,
-    entry: path.resolve(__dirname, 'src/index'),
+    entry: [
+        path.resolve(__dirname, 'src/index'),
+    ],
     target: 'web',
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -13,6 +16,11 @@ export default {
         filename: 'bundle.js'
     },
     plugins: [
+        // Create HTML file that includes reference to bundled JS.
+    new HtmlWebpackPlugin({
+        template: 'src/index.html',
+        inject: true,
+    }), 
         // Eliminate duplicate packages when generating bundle
         new webpack.optimize.DedupePlugin(),
 
